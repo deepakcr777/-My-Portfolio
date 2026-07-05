@@ -1,0 +1,25 @@
+{
+  "name": "kd",
+  "version": "1.0.0",
+  "description": "A modern, dynamic portfolio website for professional developers built with HTML, CSS, and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakcr777/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/deepakcr777/Portfolio/issues"
+  },
+  "homepage": "https://github.com/deepakcr777/Portfolio#readme",
+  "dependencies": {
+    "@imgly/background-removal-node": "^1.4.5",
+    "sharp": "^0.35.3"
+  }
+}

@@ -236,15 +236,31 @@ function initScrollReveal() {
 function initCounterAnimation() {
   const counters = document.querySelectorAll('.stat-number');
 
+  if (!counters.length) return;
+
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.dataset.target, 10);
-          animateCounter(el, target);
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+        const targetAttr = el.getAttribute('data-target');
+
+        if (targetAttr === null || targetAttr === '') {
           observer.unobserve(el);
+          return;
         }
+
+        const target = Number.parseInt(targetAttr, 10);
+
+        if (Number.isNaN(target)) {
+          observer.unobserve(el);
+          return;
+        }
+
+        animateCounter(el, target);
+
+        observer.unobserve(el);
       });
     },
     { threshold: 0.5 }

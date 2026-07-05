@@ -118,8 +118,8 @@ developer.learn();`,
     {
       role: 'B.Tech — Information Technology',
       company: 'Sri Balaji Chockalingam Engineering College',
-      period: 'Present — Pursuing',
-      description: 'Currently pursuing B.Tech in Information Technology with focus on programming, networking, web development, cloud computing, and software engineering.',
+      period: 'Final Year — Present',
+      description: 'Final-year B.Tech Information Technology student with focus on programming, networking, web development, cloud computing, and software engineering.',
       technologies: ['Python', 'Java', 'Web Dev', 'DBMS', 'Networking']
     },
     {
