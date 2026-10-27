@@ -405,7 +405,7 @@ function initProjects() {
 function initTimeline() {
   const timeline = document.getElementById('timeline');
 
-  timeline.innerHTML = PORTFOLIO_DATA.experience.map(item => `
+  timeline.innerHTML = PORTFOLIO_DATA.education.map(item => `
     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
       <div class="timeline-content">
