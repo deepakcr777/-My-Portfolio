@@ -114,7 +114,7 @@ developer.learn();`,
     { id: 'devops', label: 'DevOps' }
   ],
 
-  education: [
+  experience: [
     {
       role: 'B.Tech — Information Technology',
       company: 'Sri Balaji Chockalingam Engineering College',
