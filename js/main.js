@@ -497,12 +497,6 @@ function closeProjectModal() {
 /* ---- Misc ---- */
 function initMisc() {
   document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-  document.getElementById('downloadResume').addEventListener('click', e => {
-    e.preventDefault();
-    alert('Resume download would start here. Replace this with your actual resume PDF link.');
-  });
-
   document.getElementById('backToTop').addEventListener('click', e => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
