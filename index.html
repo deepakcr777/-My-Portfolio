@@ -307,7 +307,14 @@
           <form class="contact-form reveal" id="contactForm">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
+              <input type="text"
+       id="visitor-name"
+       name="name"
+       placeholder="Enter your name"
+       pattern="[A-Za-z ]+"
+       title="Name must contain letters and spaces only."
+       oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '')"
+       required>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
@@ -315,12 +322,16 @@
             </div> 
               <div class="form-group">
             <label for="visitor-phone">Phone Number</label>
-            <input type="tel"
-                   id="visitor-phone"
-                   name="phone"
-                   placeholder="Enter your phone number"
-                   pattern="[+]?[0-9 ()-]{7,20}"
-                   required>
+           <input type="tel"
+       id="visitor-phone"
+       name="phone"
+       placeholder="Enter your phone number"
+       pattern="[0-9]{10}"
+       maxlength="10"
+       inputmode="numeric"
+       title="Enter a valid 10-digit phone number."
+       oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)"
+       required>
         </div>
             <div class="form-group">
               <label for="subject">Subject</label>
