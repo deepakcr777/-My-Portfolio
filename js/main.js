@@ -347,7 +347,13 @@ function initProjects() {
     grid.innerHTML = PORTFOLIO_DATA.projects.map(project => `
       <article class="project-card reveal ${filter !== 'all' && project.category !== filter ? 'hidden' : ''}"
                data-category="${project.category}" data-id="${project.id}">
-        <div class="project-image" style="background: ${project.image}">
+       <div class="project-image">
+  <img
+    src="${project.image}"
+    alt="${project.title}"
+    class="project-thumbnail"
+    loading="lazy"
+  >
           <div class="project-overlay">
             <a href="${project.liveUrl}" class="project-link" target="_blank" rel="noopener" aria-label="Live demo" onclick="event.stopPropagation()">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
